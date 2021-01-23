@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<title>Discipleship Kick Start - Antioch Community Church of Fort Collins</title>
+</head>
+<body>
+    <h1>Discipleship Kick Start</h1>
+    <div class="form">
+    <h2>A Tool to Help Discipleship Thrive</h2> 
+    <p>The following assessment is a helpful tool for disciplers to know how
+        to best serve their disciples. This is not an assessment of an individual’s
+        spiritual life so much as it is an assessment of what topics would be
+        helpful to explore in discipleship.</p>  
+        <div class='inline-block-child'><form method="post" id="form" name="discipleship_survey" action="form-handler.php">
+            <h2>Core Values</h2>
+            <h3>Enduring Passion</h3>
+            <fieldset>
+                <legend>It is easy to receive God's love for me.</legend>
+                <input type="radio" name="ep1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ep1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ep1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ep1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel the Holy Spirit convicting me of sin and I know how to respond.</legend>
+                <input type="radio" name="ep2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ep2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ep2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ep2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>When I feel stuck in my relationship with Jesus, I seek help from others.</legend>
+                <input type="radio" name="ep3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ep3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ep3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ep3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>Hearing God is a normal part of my every day.</legend>
+                <input type="radio" name="ep4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ep4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ep4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ep4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <label>Describe your FaceTimes - include how often you meet with God, the length of time you spend, how you spend your time, and if applicable, what would you change?</label>
+                <br>
+                <textarea id="facetimeResponse" name="ep5" rows="3" cols = "80"></textarea>
+            </fieldset>
+            <br>
+            <h3>Selfless Love</h3>
+            <fieldset>
+                <legend>I often step outside my comfort zone to show God's love with words and actions.</legend>
+                <input type="radio" name="sl1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I consistently feel God leading me when I minister to others.</legend>
+                <input type="radio" name="sl2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel equipped to share the Gospel with others.</legend>
+                <input type="radio" name="sl3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel confident sharing the Gospel with others.</legend>
+                <input type="radio" name="sl4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I actively look for opportunities to share the Gospel in my sphere of influence</legend>
+                <input type="radio" name="sl5" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl5" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl5" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl5" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel burdened for the lost in other nations.</legend>
+                <input type="radio" name="sl6" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sl6" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sl6" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sl6" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <label>These are the people in my sphere of influence (be as specific as possible):</label>
+                <br>
+                <textarea id="sphereofinfluenceResponse" name="sl7" rows="3" cols = "80"></textarea>
+            </fieldset>
+            <h3>Courageous Generosity</h3>
+            <fieldset>
+                <legend>I give at least 10% of my income to my church.</legend>
+                <input type="radio" name="cg1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="cg1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="cg1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="cg1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I give to missions and other needs in my church community.</legend>
+                <input type="radio" name="cg2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="cg2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="cg2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="cg2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I give to other ministries and organizations outside of my church community.</legend>
+                <input type="radio" name="cg3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="cg3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="cg3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="cg3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I give even when I do not see how I will be provided for.</legend>
+                <input type="radio" name="cg4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="cg4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="cg4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="cg4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I find joy in sacrificing my ______ for others:</legend>
+                <input type="checkbox" name="cg5[]" value="Money">Money<br>
+                <input type="checkbox" name="cg5[]" value="Possessions">Possessions<br>
+                <input type="checkbox" name="cg5[]" value="Time">Time<br>
+                <input type="checkbox" name="cg5[]" value="Energy">Energy<br>              
+            </fieldset>
+            <fieldset>
+                <label>What do you want generosity to look like in your life?</label>
+                <br>
+                <textarea id="generosityResponse" name="cg6" rows="3" cols = "80"></textarea>
+            </fieldset>
+            <h3>Wholehearted Commitment</h3>
+            <fieldset>
+                <legend>I attend Sunday service every week.</legend>
+                <input type="radio" name="wc1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I attend Life Group every week.</legend>
+                <input type="radio" name="wc2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I actively pursue relationships, support, and connection with my Life Group.</legend>
+                <input type="radio" name="wc3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>When life is hard, I press in to God.</legend>
+                <input type="radio" name="wc4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>When life is hard, I press in to my church community.</legend>
+                <input type="radio" name="wc5" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc5" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc5" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc5" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel equipped and confident in lovingly doing conflict with others.</legend>
+                <input type="radio" name="wc6" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="wc6" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="wc6" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="wc6" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>If I get in conflict with someone, I tend to:</legend>
+                <input type="checkbox" name="wc7[]" value="Avoid the topic/person">Avoid the topic/person<br>
+                <input type="checkbox" name="wc7[]" value="Talk to others">Talk to others<br>
+                <input type="checkbox" name="wc7[]" value="Confront the person">Confront the person<br>
+                <input type="checkbox" name="wc7[]" value="Ask to meet">Ask to meet<br>    
+                <input type="checkbox" name="wc7[]" value="Pretend it does not bother me">Pretend it does not bother me<br>
+                <input type="checkbox" name="wc7[]" value="Pray about it">Pray about it<br>
+                <input type="checkbox" name="wc7[]" value="Admit my own fault">Admit my own fault<br>
+                <input type="checkbox" name="wc7[]" value="Unfriend them on Facebook">Unfriend them on Facebook<br>
+                Other: <input type="text" name="wc7[]" value=""><br>
+            </fieldset>
+            <fieldset>
+                <label>This is how I respond to correction (from God, leadership, and friends - indicate if there is a difference):</label>
+                <br>
+                <textarea id="correctionResponse" name="wc8" rows="3" cols = "80"></textarea>
+            </fieldset>
+            <h3>Intentional Empowerment</h3>
+            <fieldset>
+                <legend>I am interested in discipling others.</legend>
+                <input type="radio" name="ie1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ie1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ie1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ie1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel confident in discipling others.</legend>
+                <input type="radio" name="ie2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ie2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ie2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ie2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I love the way that God made me.</legend>
+                <input type="radio" name="ie3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ie3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ie3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ie3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I am excited for God's plans for my life.</legend>
+                <input type="radio" name="ie4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ie4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ie4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ie4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>Some of my spiritual gifts are:</legend>
+                <input type="text" name="ie5"></fieldset>
+            <fieldset>
+                <legend>I feel comfortable praying in the Holy Spirit.</legend>
+                <input type="radio" name="ie6" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="ie6" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="ie6" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="ie6" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset><legend>Areas that I feel I need to grow in using my gifts are:</legend>
+                <input type="text" name="ie7">
+            </fieldset>
+            <h2>Spiritual Discipline</h2>
+            <fieldset>
+                <legend>I feel comfortable praying and do so regularly.</legend>
+                <input type="radio" name="sd1" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sd1" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sd1" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sd1" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel comfortable worshipping and do so regularly.</legend>
+                <input type="radio" name="sd2" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sd2" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sd2" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sd2" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel comfortable studying the Bible and do so regularly.</legend>
+                <input type="radio" name="sd3" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sd3" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sd3" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sd3" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel comfortable fasting and do so regularly.</legend>
+                <input type="radio" name="sd4" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sd4" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sd4" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sd4" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <fieldset>
+                <legend>I feel comfortable hearing God and do so regularly.</legend>
+                <input type="radio" name="sd5" value="1"><span class="rating-num">1</span> - Never True<br>
+                <input type="radio" name="sd5" value="2"><span class="rating-num">2</span> - Occasionally True<br>
+                <input type="radio" name="sd5" value="3"><span class="rating-num">3</span> - Usually True<br>
+                <input type="radio" name="sd5" value="4"><span class="rating-num">4</span> - Always True<br>              
+            </fieldset>
+            <h2>Discipleship Questions</h2>
+            <label>What made you decide to enter a discipleship relationship?</label>
+            <br>
+            <fieldset><textarea id="enterdshipResponse" name="dq1" rows="3" cols = "80"></textarea></fieldset>
+            <br>
+            <label>If you have been in discipleship previously, what did you like and what would you change about your experience?</label>
+            <br>
+            <fieldset><textarea id="previousdshipResponse" name="dq2" rows="3" cols = "80"></textarea></fieldset>
+            <br>
+            <label>What are you hoping to gain from discipleship in this season?</label>
+            <br>
+            <fieldset><textarea id="hopetogainResponse" name="dq3" rows="3" cols = "80"></textarea></fieldset>
+            <br>
+            <label>Share one or more topics you would like to explore in discipleship:</label>
+            <br>
+            <fieldset><textarea id="topicstoexploreResponse" name="dq4" rows="3" cols = "80"></textarea></fieldset>
+            <p>
+            <h2>Final Information</h2>
+            <fieldset>
+            <label>Your Name:</label>    <input type="text" class="input-text" name="name" required><br>
+            <label>Discipler's Email:</label>    <input type="email" name="email" required>
+            </fieldset>
+            <br><input class="btn" type="submit" value="Submit now">
+        </form></div>
+</div>
+</body>
+</html>
