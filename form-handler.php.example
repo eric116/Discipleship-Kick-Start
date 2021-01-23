@@ -1,0 +1,148 @@
+<?php
+
+require './vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+$mail = new PHPMailer;
+
+//set variables based on what was POSTed from the HTML form
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); 
+$email_address = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); 
+$ep1 = $_POST['ep1'];
+$ep2 = $_POST['ep2'];
+$ep3 = $_POST['ep3']; 
+$ep4 = $_POST['ep4'];
+$ep5 = filter_var($_POST['ep5'], FILTER_SANITIZE_STRING);
+$sl1 = $_POST['sl1'];
+$sl2 = $_POST['sl2'];
+$sl3 = $_POST['sl3'];
+$sl4 = $_POST['sl4'];
+$sl5 = $_POST['sl5'];
+$sl6 = $_POST['sl6'];
+$sl7 = filter_var($_POST['sl7'], FILTER_SANITIZE_STRING);
+$cg1 = $_POST['cg1'];
+$cg2 = $_POST['cg2'];
+$cg3 = $_POST['cg3'];
+$cg4 = $_POST['cg4'];
+if(empty($_POST['cg5']))
+{
+    $cg5 = "None selected";
+}
+else
+{
+    $cg5 = implode(', ', $_POST['cg5']);
+    $cg5 = filter_var($cg5, FILTER_SANITIZE_STRING);
+}
+$cg6 = $_POST['cg6'];
+$wc1 = $_POST['wc1'];
+$wc2 = $_POST['wc2'];
+$wc3 = $_POST['wc3'];
+$wc4 = $_POST['wc4'];
+$wc5 = $_POST['wc5'];
+$wc6 = $_POST['wc6'];
+if(empty($_POST['wc7']))
+{
+    $wc7 = "None selected";
+}
+else
+{
+    $wc7 = implode(', ', $_POST['wc7']);
+    $wc7 = filter_var($wc7, FILTER_SANITIZE_STRING);
+}
+$wc8 = filter_var($_POST['wc8'], FILTER_SANITIZE_STRING);
+$ie1 = $_POST['ie1'];
+$ie2 = $_POST['ie2'];
+$ie3 = $_POST['ie3'];
+$ie4 = $_POST['ie4'];
+$ie5 = filter_var($_POST['ie5'], FILTER_SANITIZE_STRING);
+$ie6 = $_POST['ie6'];
+$ie7 = filter_var($_POST['ie7'], FILTER_SANITIZE_STRING);
+$sd1 = $_POST['sd1'];
+$sd2 = $_POST['sd2'];
+$sd3 = $_POST['sd3'];
+$sd4 = $_POST['sd4'];
+$sd5 = $_POST['sd5'];
+$dq1 = filter_var($_POST['dq1'], FILTER_SANITIZE_STRING);
+$dq2 = filter_var($_POST['dq2'], FILTER_SANITIZE_STRING);
+$dq3 = filter_var($_POST['dq3'], FILTER_SANITIZE_STRING);
+$dq4 = filter_var($_POST['dq4'], FILTER_SANITIZE_STRING);
+
+$mail->isSMTP();
+
+//Enable SMTP debugging
+// 0 = off (for production use)
+// 1 = client messages
+// 2 = client and server messages
+$mail->SMTPDebug = 0;
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls';
+$mail->SMTPAuth = true;
+$mail->Username = "";
+$mail->Password = "";
+
+$mail->setFrom('sender email here', 'sender name here');
+
+//Set who the message is to be sent to
+$mail->addAddress($email_address, $name);
+
+//Set the message subject dynamically pulling in the user's name
+$mail->Subject = "Discipleship Kick Start: $name";
+
+$body = "You have received a new Discipleship Kick Start report from $name. ".
+"<br><br>Legend:<br><b>1</b> - Never True<br><b>2</b> - Occasionally True<br><b>3</b> - Usually True<br><b>4</b> - Always True".
+"<p>Here are the details:<p>".
+"<h1 style=\"font-size: medium;\">Enduring Passion</h1>1. It is easy to receive God's love for me - <b>$ep1</b>".
+"<br>2. I feel the Holy Spirit convicting me of sin and I know how to respond - <b>$ep2</b>".
+"<br>3. When I feel stuck in my relationship with Jesus, I seek help from others - <b>$ep3</b>".
+"<br>4. Hearing God is a normal part of my every day - <b>$ep4</b>".
+"<br>5. Description of FaceTimes: <br><i>$ep5</i>".
+"<h1 style=\"font-size: medium;\">Selfless Love</h1>1. I often step outside my comfort zone to show God's love with words and actions - <b>$sl1</b>".
+"<br>2. I consistently feel God leading me when I minister to others - <b>$sl2</b>".
+"<br>3. I feel equipped to share the Gospel with others - <b>$sl3</b>".
+"<br>4. I feel confident sharing the Gospel with others - <b>$sl4</b>".
+"<br>5. I actively look for opportunities to share the Gospel in my sphere of influence - <b>$sl5</b>".
+"<br>6. I feel burdened for the lost in other nations - <b>$sl6</b>".
+"<br>7. These are the people in my sphere of influence:<br><i>$sl7</i>".
+"<h1 style=\"font-size: medium;\">Courageous Generosity</h1>1. I give at least 10% of my income to my church - <b>$cg1</b>".
+"<br>2. I give to missions and other needs in my church community - <b>$cg2</b>".
+"<br>3. I give to other ministries and organizations outside of my church community - <b>$cg3</b>".
+"<br>4. I give even when I do not see how I will be provided for - <b>$cg4</b>".
+"<br>5. I find joy in sacrificing my ______ for others: <i>$cg5</i>".
+"<br>6. What do you want generosity to look like in your life?<br><i>$cg6</i>".
+"<h1 style=\"font-size: medium;\">Wholehearted Commitment</h1>".
+"1. I attend Sunday service every week - <b>$wc1</b>".
+"<br>2. I attend Life Group every week - <b>$wc2</b>".
+"<br>3. I actively pursue relationships, support, and connection with my Life Group - <b>$wc3</b>".
+"<br>4. When life is hard, I press in to God - <b>$wc4</b>".
+"<br>5. When life is hard, I press in to my church community - <b>$wc5</b>".
+"<br>6. I feel equipped and confident in lovingly doing conflict with others - <b>$wc6</b>".
+"<br>7. If I get in conflict with someone, I tend to: <i>$wc7</i>".
+"<br>8. This is how I respond to correction:<br><i>$wc8</i>".
+"<h1 style=\"font-size: medium;\">Intentional Empowerment</h1>".
+"1. I am interested in discipling others - <b>$ie1</b>".
+"<br>2. I feel confident in discipling others - <b>$ie2</b>".
+"<br>3. I love the way that God made me - <b>$ie3</b>".
+"<br>4. I am excited for God's plans for my life - <b>$ie4</b>".
+"<br>5. Some of my spiritual gifts are: <i>$ie5</i>".
+"<br>6. I feel comfortable praying in the Holy Spirit - <b>$ie6</b>".
+"<br>7. Areas that I feel I need to grow in using my gifts are: <i>$ie7</i>".
+"<h1 style=\"font-size: medium;\">Spiritual Discipline</h1>".
+"1. I feel comfortable praying and do so regularly - <b>$sd1</b>".
+"<br>2. I feel comfortable worshipping and do so regularly - <b>$sd2</b>".
+"<br>3. I feel comfortable studying the Bible and do so regularly - <b>$sd3</b>".
+"<br>4. I feel comfortable fasting and do so regularly - <b>$sd4</b>".
+"<br>5. I feel comfortable hearing God and do so regularly - <b>$sd5</b>".
+"<h1 style=\"font-size: medium;\">Discipleship Questions</h1>".
+"1. What made you decide to enter a discipleship relationship?<br><i>$dq1</i><br>".
+"<br>2. If you have been in discipleship previously, what did you like and what would you change about your experience?<br><i>$dq2</i><br>".
+"<br>3. What are you hoping to gain from discipleship in this season?<br><i>$dq3</i><br>".
+"<br>4. Share one or more topics you would like to explore in discipleship:<br><i>$dq4</i>";
+
+$mail->msgHTML($body);
+
+if (!$mail->send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+    header('Location: thank-you.html');
+}
+?>

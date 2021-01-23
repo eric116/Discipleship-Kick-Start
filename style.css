@@ -39,10 +39,6 @@ body{
     max-width: 70%;
 }
 
-.rating-num{
-    font-weight: auto;
-}
-
 textarea{
     box-sizing: border-box;
     float: left;
@@ -67,7 +63,6 @@ textarea{
     background-image: -o-linear-gradient(top, #05697a, #05597a);
     background-image: linear-gradient(to bottom, #05697a, #05597a);
     -webkit-border-radius: 21;
-    -moz-border-radius: 21;
     border-radius: 21px;
     color: #fafafa;
     font-size: 18px;
